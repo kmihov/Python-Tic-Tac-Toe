@@ -5,7 +5,7 @@ class PlayerOne(WinChecker):
 
     def __init__(self):
         self.player_one_win = False
-
+    #this method marks the possition given from the player on the board
     @staticmethod
     def mark_x(board, y, x):
         try:

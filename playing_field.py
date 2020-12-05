@@ -8,7 +8,7 @@ def check_if_player_one_wins(player: PlayerOne, board):
     if player.player_one_win:
         global user_wins
         user_wins += 1
-        print(f"YOU WIN!\nYour wins:{user_wins} form {game_counter} games played.")
+        print(f"YOU WIN!\nPlayer: {user_wins}\nDraws: {draws}\nform {game_counter} games played.")
         return True
 
 
@@ -17,7 +17,7 @@ def check_if_player_two_wins(player: PlayerTwo, board):
     if player.player_two_win:
         global computer_wins
         computer_wins += 1
-        print(f"Computer won!\nComputer wins: {computer_wins}\nYour wins:{user_wins}\nfrom {game_counter} games played")
+        print(f"Computer won!\nComputer: {computer_wins}\nPlayer: {user_wins}\nDraws: {draws}\nfrom {game_counter} games played")
         return True
 
 
@@ -26,7 +26,7 @@ def check_if_playfield_is_full(board: Board):
     if board.board_full:
         global draws
         draws += 1
-        print(f"DRAW!\nDraws: {draws}\nYour wins:{user_wins}\nComputer wins: {computer_wins}\nfrom {game_counter} games played")
+        print(f"DRAW!\nDraws: {draws}\nPLayer: {user_wins}\nComputer: {computer_wins}\nfrom {game_counter} games played")
         return True
 
 
@@ -52,6 +52,7 @@ while True:
         while True:
 
             if game_counter % 2 == 1:
+                # p_one starts the game
                 col = input("Enter column: \n").lower()
                 row = input("Enter row: \n").lower()
 
@@ -176,6 +177,5 @@ while True:
                     print(b.print_board())
                     continue
 
-#apply difficulty level
-#check bug : BOARD IS FULL AND GAME END! YET ASKS FOR INPUT..?
-#
+#To do: apply difficulty level
+

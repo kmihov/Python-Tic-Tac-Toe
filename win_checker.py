@@ -73,13 +73,13 @@ class WinChecker:
 
             col_count_right += 1
             col_count_left -= 1
-            #checking if player has a diagonal left to right win
+            #checking if computer has a diagonal left to right win
             if board.board[row_i][col_count_right] == "O":
                 right_diagonal_win += "O"
                 if right_diagonal_win == "OOO":
                     self.player_two_win = True
                     break
-            #checking if player has a diagonal right to left win
+            #checking if computer has a diagonal right to left win
             if board.board[row_i][col_count_left] == "O":
                 left_diagonal_win += "O"
                 if left_diagonal_win == "OOO":
@@ -89,16 +89,16 @@ class WinChecker:
             for col_i, col in enumerate(row):
 
                 if col == "O":
-                #adding X's to row_win to check if any of the rows win
+                #adding O's to row_win to check if any of the rows win
                     row_win += "O"
 
                 if row_win == "OOO":
                     self.player_two_win = True
                     break
-                #if no three X's are found in a row , row_win will restart for next row
+                #if no three O's are found in a row , row_win will restart for next row
                 if col_i == 2:
                     row_win = ""
-                #adding X's to col_win and checking if any of the columns are winners
+                #adding O's to col_win and checking if any of the columns are winners
                 if col_i == 0 and col == "O":
                     col_win_one += "O"
                 elif col_i == 1 and col == "O":
