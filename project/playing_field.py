@@ -1,6 +1,6 @@
-from TicTacToe.board import Board
-from TicTacToe.player_1 import PlayerOne
-from TicTacToe.player_2 import PlayerTwo
+from project.board import Board
+from project.player_1 import PlayerOne
+from project.player_2 import PlayerTwo
 
 
 def check_if_player_one_wins(player: PlayerOne, board):
@@ -53,8 +53,6 @@ while True:
 
             if game_counter % 2 == 1:
                 # p_one starts the game
-                col = input("Enter column: \n").lower()
-                row = input("Enter row: \n").lower()
 
                 #if cols not in cols or rows not in rows:
                     #while True:
@@ -65,7 +63,7 @@ while True:
                             #if row in rows:
                                 #break
 
-                print(p_one.mark_x(b, col, row))
+                p_one.mark_x(b)
                 print(b.print_board())
 
                 check = check_if_player_one_wins(p_one, b)
@@ -130,7 +128,7 @@ while True:
                     if check:
                         break
 
-                    p_one.mark_x(b, input("enter column: \n").lower(), input("enter row: \n"))
+                    p_one.mark_x(b)
                     print(b.print_board())
                     continue
 
@@ -152,7 +150,7 @@ while True:
                     if check:
                         break
 
-                    p_one.mark_x(b, input("enter column: \n").lower(), input("enter row: \n"))
+                    p_one.mark_x(b)
                     print(b.print_board())
                     continue
 
@@ -173,7 +171,7 @@ while True:
                     if check:
                         break
 
-                    p_one.mark_x(b, input("enter column: \n").lower(), input("enter row: \n"))
+                    p_one.mark_x(b)
                     print(b.print_board())
                     continue
 

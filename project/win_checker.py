@@ -1,4 +1,4 @@
-from TicTacToe.board import Board
+from project.board import Board
 
 
 class WinChecker:

@@ -35,4 +35,3 @@ class Board:
     @board.setter
     def board(self, value):
         self.__board = value
-#asdasdasd

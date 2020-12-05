@@ -1,5 +1,5 @@
-from TicTacToe.win_checker import WinChecker
-from TicTacToe.board import Board
+from project.win_checker import WinChecker
+from project.board import Board
 from random import randint
 
 class PlayerTwo(WinChecker):
